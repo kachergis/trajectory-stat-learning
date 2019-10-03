@@ -1,0 +1,112 @@
+---
+title             : "Learning continuous sequential actions with and without reward"
+shorttitle        : "Learning sequential actions"
+
+author: 
+  - name          : "Roy de Kleijn"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Leiden, NL"
+    email         : "kleijnrde@fsw.leidenuniv.nl"
+  - name          : "George Kachergis"
+    affiliation   : "2"
+
+affiliation:
+  - id            : "1"
+    institution   : "Leiden University"
+  - id            : "2"
+    institution   : "Stanford University"
+
+authornote: |
+  Department of Psychology, Leiden University
+  
+  Department of Psychology, Stanford University
+
+abstract: |
+  The serial reaction time (SRT) task measures learning of a repeating stimulus sequence as speed up in keypresses, and is used to study implicit and motor learning research which aim to explain complex skill acquisition (e.g., learning to type). 
+  However, complex skills involve continuous, temporally-extended movements that are not fully measured in the discrete button presses of the SRT task. 
+  Using a movement adaptation of the SRT task in which spatial locations are both stimuli and response options, participants were trained to move the cursor to a continuous sequence of stimuli. 
+  Elsewhere we replicated @Nissen1987 with the trajectory SRT paradigm [@Kachergis2014]. 
+  The current study extends it to the problem of learning complex actions, composed of recurring short sequences of movements that may be rearranged like words. 
+  Reaction time and trajectory deflection analyses show that subjects show within-word improvements relative to unpredictable between-word transitions, suggesting that participants learn to segment the sequence according to the statistics of the input.
+  
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+library("tidyverse")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- comments -->
+
+## Participants
+
+45 Leiden University students participated in exchange for 3.5 euros or one course credit. Participants were told they would receive an additional euro if they performed well (all participants were given this supplement).
+
+## Material
+
+## Procedure
+
+Participants were told to move the cursor as fast and accurately as possible to any target that changed to green, and that good performance could earn them a bonus euro. 
+The stimulus display consisted of four red squares (location 1 = upper left, 2 = upper right, 3 = lower left, 4 = lower right), displayed continuously. 
+Monitors were 17", set to 1024x768 pixel resolution, and each stimulus was 80 pixels on each side, separated by 440 pixels of white space. 
+After arriving at the highlighted green stimulus (the other three stimuli were red), another stimulus was highlighted after a 500 ms ISI. 
+Participants completed 4 blocks of 20 training trials, each of which contained a series of 12 locations (i.e., 3 "words"). 
+There was a short rest break after every block. 
+In each block, each of the 6 action "word" subsequences appeared 10 times[^1], randomly distributed. 
+Word transition frequency was not uniformly random, as no word or stimulus repetitions were allowed. 
+Points were allocated periodically during training trials, indicated in green numbers above the arrived-at target stimulus. 
+After training, participants were given a generating task in which they were asked to generate any action sequences they recalled from training.  
+In the generation task, correct predictions were rewarded (5 points per stimulus), mistakes were penalized (-20 points). 
+After either correctly forming all words or by making 24 attempts (i.e., 72 movements) in total, participants completed the experiment. 
+
+[^1]: Note that 40 repetitions per word is far fewer than the 300 repetitions used in Saffran et al.
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+
+# Results
+
+# Discussion
+
+
+\newpage
+
+# References
+```{r create_r-references}
+r_refs(file = "r-references.bib")
+```
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id = "refs"></div>
+\endgroup
